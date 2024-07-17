@@ -11,7 +11,7 @@ function App() {
   useEffect(() => {
     console.log("Fetching transactions from", `${backendUrl}/transactions`);
     axios
-      .get(`http://localhost:5001/transactions`)
+      .get(`${backendUrl}/Transactions`)
       .then((response) => setTransactions(response.data))
       .catch((error) => console.error("Error Fetching Transactions", error));
   }, []);
@@ -21,7 +21,7 @@ function App() {
     const newTransaction = { description, amount: parseFloat(amount) };
     console.log("Adding transaction:", newTransaction);
     axios
-      .post(`http://localhost:5001/transactions`, newTransaction)
+      .post(`http://localhost:5001/Transactions`, newTransaction)
       .then((response) => {
         setTransactions([...transactions, response.data]);
         setDescription("");
