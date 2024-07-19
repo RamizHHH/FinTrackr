@@ -1,0 +1,35 @@
+.navBar{
+    background-color: hsl(233, 61%, 52%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    position: fixed;
+    top: 0;
+    left:  0;
+    width: 100%;
+}
+.navBar h3{
+    color: white;
+    margin: 5px;
+    font-size: 25px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+.navBar ul{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.navBar li{
+    margin: 10px;
+}
+
+.navlink{
+    color: hsl(0, 0%, 100%);
+}
+.navlink:hover{
+    color: hsl(0, 0%, 90%);
+}

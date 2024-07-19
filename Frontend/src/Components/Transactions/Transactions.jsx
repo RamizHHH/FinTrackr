@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import styles from "./Transactions.module.css";
 
 const Transactions = () => {
   const [transactions, setTransactions] = useState([]);
@@ -12,16 +13,20 @@ const Transactions = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Transactions</h1>
-      <ul>
-        {transactions.map((transaction) => (
-          <li key={transaction._id}>
-            {transaction.description} - ${transaction.amount} on{" "}
-            {new Date(transaction.date).toLocaleDateString()}
-          </li>
-        ))}
-      </ul>
+    <div className={styles.container}>
+      <div className={styles.list}>
+        <section>
+          <h1>Transactions</h1>
+          <ul>
+            {transactions.map((transaction) => (
+              <li key={transaction._id}>
+                {transaction.description} - ${transaction.amount} on{" "}
+                {new Date(transaction.date).toLocaleDateString()}
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
     </div>
   );
 };
