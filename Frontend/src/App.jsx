@@ -11,6 +11,7 @@ import Transactions from "./Components/Transactions/Transactions.jsx"; // Import
 import AddTransactions from "./Components/AddTransactions/AddTransactions.jsx"; // Import AddTransactions component
 import Home from "./Components/Home/Home.jsx";
 import NavBar from "./Components/Navbar/NavBar.jsx"; // Import NavBar component
+import Balance from "./Components/Balance/Balance.jsx";
 
 // Define the main App component
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route path="/AddTransactions" element={<AddTransactions />} />
         <Route path="/transactions" element={<Transactions />} />
+        <Route path="/Balance" element={<Balance />} />
       </Routes>
     </BrowserRouter>
   );

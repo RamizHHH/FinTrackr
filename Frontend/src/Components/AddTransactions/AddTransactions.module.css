@@ -1,0 +1,25 @@
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formEle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formEle input{
+    padding: 5px;
+    margin: 5px;
+}
+
+.formEle button{
+    margin: 5px;
+}
+
+.heading{
+    text-align: center;
+}

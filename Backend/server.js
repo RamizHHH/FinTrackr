@@ -52,6 +52,17 @@ app.post('/Transactions', async (req, res) => {
   }
 });
 
+app.delete('/Transactions/:id', async(req, res)=>{
+  try{
+    const {id} = req.params;
+    await Transaction.findByIdAndDelete(id);
+    res.status(200).json({message: "transaction deleted succsesfully"})
+  }
+  catch(error){
+    console.error(error)
+  }
+})
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

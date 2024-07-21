@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
+import styles from "./AddTransactions.module.css";
+
 function AddTransactions() {
   const [description, setDescription] = useState("");
   const [amount, setAmount] = useState("");
@@ -22,8 +24,8 @@ function AddTransactions() {
   return (
     <>
       <div>
-        <h1>Add Transactions</h1>
-        <form onSubmit={handleSubmit}>
+        <h1 className={styles.heading}>Add Transactions</h1>
+        <form onSubmit={handleSubmit} className={styles.formEle}>
           <input
             type="text"
             placeholder="Description"

@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./NavBar.module.css";
+import Balance from "../Balance/Balance.jsx";
 
 const NavBar = () => {
   return (
@@ -20,6 +21,11 @@ const NavBar = () => {
         <li>
           <Link to="/AddTransactions" className={styles.navlink}>
             Add Transactions
+          </Link>{" "}
+        </li>
+        <li>
+          <Link to="/Balance" className={styles.navlink}>
+            Balance
           </Link>{" "}
         </li>
       </ul>

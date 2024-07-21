@@ -12,6 +12,17 @@ const Transactions = () => {
       .catch((error) => console.error("Error fetching transactions:", error));
   }, []);
 
+  async function handleDelete(id) {
+    try {
+      await axios.delete(`http://localhost:5001/transactions/${id}`);
+      setTransactions(
+        transactions.filter((transaction) => transaction._id !== id)
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.list}>
@@ -20,8 +31,14 @@ const Transactions = () => {
           <ul>
             {transactions.map((transaction) => (
               <li key={transaction._id}>
-                {transaction.description} - ${transaction.amount} on{" "}
+                {transaction.description}: ${transaction.amount} on{" "}
                 {new Date(transaction.date).toLocaleDateString()}
+                <button
+                  className={styles.delButton}
+                  onClick={() => handleDelete(transaction._id)}
+                >
+                  Delete Transaction
+                </button>
               </li>
             ))}
           </ul>
