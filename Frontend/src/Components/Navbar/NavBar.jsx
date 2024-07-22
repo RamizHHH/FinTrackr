@@ -6,15 +6,11 @@ import Balance from "../Balance/Balance.jsx";
 const NavBar = () => {
   return (
     <nav className={styles.navBar}>
+      <img src="../assets/FinTrackr.png" />
       <h3>FinTrackr</h3>
       <ul>
         <li>
           <Link to="/" className={styles.navlink}>
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/transactions" className={styles.navlink}>
             Transactions
           </Link>{" "}
         </li>

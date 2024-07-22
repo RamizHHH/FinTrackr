@@ -48,7 +48,7 @@ function Balance() {
               .toFixed(2)}
           </p>
           <p>
-            <strong>Expenses:</strong>{" "}
+            <strong>Expenses:</strong> $
             {expense
               .reduce((acc, transaction) => acc + transaction.amount, 0)
               .toFixed(2)}

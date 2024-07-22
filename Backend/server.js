@@ -24,6 +24,7 @@ const transactionSchema = new mongoose.Schema({
   description: String,
   amount: Number,
   date: { type: Date, default: Date.now },
+  category: String,
 });
 
 const Transaction = mongoose.model('Transaction', transactionSchema);
@@ -42,6 +43,7 @@ app.post('/Transactions', async (req, res) => {
   const transaction = new Transaction({
     description: req.body.description,
     amount: req.body.amount,
+    category: req.body.amount,
   });
   try {
     const newTransaction = await transaction.save();

@@ -19,9 +19,8 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route exact path="/" element={<Transactions />} />
         <Route path="/AddTransactions" element={<AddTransactions />} />
-        <Route path="/transactions" element={<Transactions />} />
         <Route path="/Balance" element={<Balance />} />
       </Routes>
     </BrowserRouter>

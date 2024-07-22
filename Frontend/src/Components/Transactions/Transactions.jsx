@@ -33,6 +33,7 @@ const Transactions = () => {
               <li key={transaction._id}>
                 {transaction.description}: ${transaction.amount} on{" "}
                 {new Date(transaction.date).toLocaleDateString()}
+                {transaction.category}
                 <button
                   className={styles.delButton}
                   onClick={() => handleDelete(transaction._id)}

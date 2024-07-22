@@ -1,0 +1,8 @@
+.container{
+    display: flex;
+    justify-content: space-between; /* Distribute space between the items */
+    align-items: flex-start; /* Align items to the start of the flex container */
+    gap: 20px;
+    padding: 20px;
+    font-size: 0.5rem;
+}
