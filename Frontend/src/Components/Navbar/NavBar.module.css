@@ -33,3 +33,10 @@
 .navlink:hover{
     color: hsl(0, 0%, 90%);
 }
+
+
+.navBar img{
+    height: 40px;
+    width: auto;
+    margin-right: 10px;
+}

@@ -43,7 +43,7 @@ app.post('/Transactions', async (req, res) => {
   const transaction = new Transaction({
     description: req.body.description,
     amount: req.body.amount,
-    category: req.body.amount,
+    category: req.body.category,
   });
   try {
     const newTransaction = await transaction.save();

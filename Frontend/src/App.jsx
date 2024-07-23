@@ -19,7 +19,8 @@ function App() {
     <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route exact path="/" element={<Transactions />} />
+        <Route exact path="/" element={<Home />} />
+        <Route path="/Transactions" element={<Transactions />} />
         <Route path="/AddTransactions" element={<AddTransactions />} />
         <Route path="/Balance" element={<Balance />} />
       </Routes>

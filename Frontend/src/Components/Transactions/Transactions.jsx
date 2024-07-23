@@ -31,9 +31,9 @@ const Transactions = () => {
           <ul>
             {transactions.map((transaction) => (
               <li key={transaction._id}>
-                {transaction.description}: ${transaction.amount} on{" "}
-                {new Date(transaction.date).toLocaleDateString()}
-                {transaction.category}
+                {transaction.category}: {transaction.description}: $
+                {transaction.amount} on{" "}
+                {new Date(transaction.date).toLocaleDateString()}{" "}
                 <button
                   className={styles.delButton}
                   onClick={() => handleDelete(transaction._id)}

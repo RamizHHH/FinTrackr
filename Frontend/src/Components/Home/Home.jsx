@@ -6,8 +6,7 @@ function Home() {
   return (
     <>
       <div className={styles.container}>
-        <Transactions />
-        <Balance />
+        <h1 className={styles.titleHeader}>Welcome To FinTrackr</h1>
       </div>
     </>
   );

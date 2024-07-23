@@ -1,5 +1,5 @@
 
- body {
+body {
   height: 100%;
   margin: 0;
   display: flex;
@@ -28,4 +28,8 @@
 .delButton{
   font-size: 1rem;
   margin: 10px;
+}
+
+.list h1{
+  text-align: center;
 }
