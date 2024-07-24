@@ -13,16 +13,21 @@ body{
 
 .formEle input{
     padding: 5px;
-    margin: 5px;
+    margin: 10px;
     font-size: 1.5rem;
 }
 
 .formEle button{
-    margin: 5px;
+    margin: 10px;
     font-size: 1.5rem;
 }
 
 .heading{
     text-align: center;
     font-size: 4rem
+}
+
+.catSelect{
+    font-size: 1.5rem;
+    margin: 10px;
 }

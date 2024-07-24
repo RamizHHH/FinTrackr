@@ -45,6 +45,7 @@ function AddTransactions() {
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             required
+            className={styles.catSelect}
           >
             <option value="">Select A Category</option>
             <option value="Food">Food</option>

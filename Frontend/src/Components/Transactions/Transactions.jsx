@@ -28,21 +28,35 @@ const Transactions = () => {
       <div className={styles.list}>
         <section>
           <h1>Transactions</h1>
-          <ul>
-            {transactions.map((transaction) => (
-              <li key={transaction._id}>
-                {transaction.category}: {transaction.description}: $
-                {transaction.amount} on{" "}
-                {new Date(transaction.date).toLocaleDateString()}{" "}
-                <button
-                  className={styles.delButton}
-                  onClick={() => handleDelete(transaction._id)}
-                >
-                  Delete Transaction
-                </button>
-              </li>
-            ))}
-          </ul>
+          <table className={styles.table}>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Description</th>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {transactions.map((transaction) => (
+                <tr key={transaction._id}>
+                  <td>{transaction.category}</td>
+                  <td>{transaction.description}</td>
+                  <td>${transaction.amount}</td>
+                  <td>{new Date(transaction.date).toLocaleDateString()}</td>
+                  <td>
+                    <button
+                      className={styles.delButton}
+                      onClick={() => handleDelete(transaction._id)}
+                    >
+                      Delete Transaction
+                    </button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </section>
       </div>
     </div>
